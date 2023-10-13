@@ -1,0 +1,18 @@
+#+title: Mnist Debug
+
+* Loading dataset
+#+begin_src python :session pydg :tangle yes
+from tensorflow.keras.datasets import mnist
+
+(train_images, train_labels), (test_images, test_labels) = mnist.load_data()
+#+end_src
+
+* Inspection of the training data
+#+begin_src python :session pydg :tangle yes
+print(train_images.shape)
+print(len(train_labels))
+train_labels
+#+end_src
+
+#+RESULTS:
+: array([5, 0, 4, ..., 5, 6, 8], dtype=uint8)
